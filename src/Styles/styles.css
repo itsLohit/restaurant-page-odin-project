@@ -1,0 +1,185 @@
+@font-face {
+    font-family: Tangerine;
+    src: url(../../assets/fonts/Tangerine-Bold.ttf);
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url(../../assets/fonts/Montserrat-Italic-VariableFont_wght.ttf);
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --font-color: #eee;
+    --font-color-dark: #aaa;
+    --border-color: #222;
+    --background-light: rgba(0, 0, 0, 0.6);
+    --background-light-hover: rgba(99, 99, 99, 0.4);
+    --background-dark: rgba(0, 0, 0, 0.9);
+}
+
+html {
+    font-size: 62.5%;
+    line-height: 1.6;
+}
+
+header {
+    font-size: 2.4rem;
+}
+
+body {
+    font-family: Montserrat;
+    color: var(--font-color);
+    background-image: url("/assets/images/background.jpeg");
+    background-attachment: fixed;
+    background-size: cover;
+  }
+
+
+#content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    max-width: 700px;
+    padding: 4rem;
+    margin: auto;
+    font-size: 2rem;
+    background-color: var(--background-light);
+    border: 1px solid var(--border-color);
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--background-dark);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.restaurant-name {
+    margin-bottom: 1rem;
+    font-family: Tangerine, cursive;
+    color: white;
+    font-size: 8rem;
+}
+
+button{
+    padding: 2rem;
+    font-size: 2rem;
+    background-color: transparent;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+    border-style: none;
+    outline: none;
+    color: white;
+}
+
+button:hover {
+    border-bottom: 2px solid var(--font-color);
+}
+
+
+
+.home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 525px;
+    width: 618px;
+}
+
+.home p {
+    padding: 1rem;
+}
+
+.home img {
+    width: 50%;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    opacity: 90%;
+  
+}
+
+.menu {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 4rem;
+}
+
+.menu-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    padding: 4rem;
+    cursor: pointer;
+    background-color: var(--background-light);
+}
+
+.menu-item:hover {
+    background-color: var(--background-light-hover);
+}
+
+.menu-item h2 {
+    padding: 2rem;
+}
+  
+.menu-item p {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 525px;
+  width: 618px;
+  animation: fadeIn 1.5s;
+}
+
+.contact p {
+  width: 100%;
+  padding: 1rem;
+}
+
+.contact img {
+  max-height: 420px;
+  padding: 1rem;
+  opacity: 90%;
+}
+
+@media (max-width: 700px) {
+    .home,
+    .contact {
+      height: 100%;
+      width: 100%;
+    }
+  
+    .menu {
+      grid-template-columns: 1fr;
+    }
+}
+  
+@media (max-width: 500px) {
+  html {
+    font-size: 57.5%;
+  }
+
+  .home img {
+    width: 80%;
+  }
+}
